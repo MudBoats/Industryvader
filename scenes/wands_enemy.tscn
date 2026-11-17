@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://nwqvn48tcums"]
+
+[ext_resource type="Script" uid="uid://bkdo3h2tgdvqf" path="res://scripts/enemy/wands_enemy.gd" id="1_lswut"]
+[ext_resource type="Texture2D" uid="uid://cw00cvo0faras" path="res://resource/pictures/kenney_simple-space/PNG/Default/enemy_A.png" id="2_2jpaf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_baul3"]
+size = Vector2(48, 47)
+
+[node name="WandsEnemy" type="Area2D" unique_id=248797008]
+script = ExtResource("1_lswut")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=298947210]
+rotation = 3.1415927
+texture = ExtResource("2_2jpaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384318650]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_baul3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

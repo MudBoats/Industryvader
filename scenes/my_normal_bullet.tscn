@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bt0kbwippufqj"]
+
+[ext_resource type="Script" uid="uid://c6hu7w3464hv2" path="res://scripts/bullets/my_normal_bullet.gd" id="1_c6748"]
+[ext_resource type="Texture2D" uid="uid://ckihcqw4hgqk1" path="res://resource/pictures/kenney_pixel-shmup/Tiles/tile_0000.png" id="2_1a7n7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnkt0"]
+
+[node name="MyNormalBullet" type="Area2D" unique_id=1221356235 groups=["bullets"]]
+script = ExtResource("1_c6748")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=706453822]
+texture = ExtResource("2_1a7n7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1969743549]
+rotation = -0.0046776817
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_pnkt0")
