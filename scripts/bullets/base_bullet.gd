@@ -16,12 +16,12 @@ func _entity_process(delta: float) -> void:
 	position += direction.normalized() * speed * delta
 	
 	# 高度上限のさらに上、または地下深くに行ったら自動消滅
-	if position.y < -3000.0 or position.y > 1000.0:
+	if position.y < GameState.get_max_view_height() or position.y > GameState.get_min_view_height():
 		queue_free()
 
 func _on_area_entered(area: Area2D) -> void:
 	# 敵（BaseEnemy）に当たった場合の共通処理
-	if area is BaseEnemy:
+	if area is base_enemy:
 		area.take_damage(damage)
 		pierce_count -= 1
 		if pierce_count <= 0:

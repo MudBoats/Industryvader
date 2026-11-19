@@ -1,7 +1,6 @@
-extends Area2D
+extends base_bullet
 
 # 弾の移動速度（ピクセル/秒）
-@export var speed: float = 600.0
 
 func _physics_process(delta: float) -> void:
 	# 毎フレーム上方向に移動（2D座標系では上方向が Y マイナス）

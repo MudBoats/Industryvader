@@ -16,7 +16,7 @@ func _on_enemy_spawner_timeout() -> void:
 	var enemy = enemy_scene.instantiate()
 	
 	# 画面の上端のランダムなX座標に配置
-	var spawn_x = randf_range(50.0, get_viewport_rect().size.x - 50.0)
-	enemy.position = Vector2(spawn_x,-(GameState.max_build_height+GameState.margin_top_tiles)*GameState.TILE_SIZE)
+	var spawn_x = randf_range(50.0, GameState.WORLD_WIDTH_PX)
+	enemy.position = Vector2(spawn_x,GameState.get_max_view_height())
 	
 	add_child(enemy)

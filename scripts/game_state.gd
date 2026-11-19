@@ -44,3 +44,8 @@ func apply_world_wrap(target_node: Node2D, main_sprite: Sprite2D, ghost_sprite: 
 	else:
 		# 境界から離れているときは分身を隠す
 		ghost_sprite.visible = false
+
+func get_max_view_height() -> float:
+	return TILE_SIZE*-(max_build_height+margin_top_tiles)
+func get_min_view_height() -> float:
+	return TILE_SIZE*(ground_y_tile+margin_bottom_tiles)
