@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2slk07ds70l3" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://bt0kbwippufqj" path="res://scenes/my_normal_bullet.tscn" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://dcxmep51mi4ch" path="res://resource/pictures/kenney_simple-space/PNG/Default/ship_A.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://brea4tw3nkrns" path="res://resource/picture/entity/PNG/Default/ship_A.png" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ok4w"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_qhqgy")
 bullet_scene = ExtResource("2_dqkch")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=786124607]
-texture = ExtResource("3_qlg0r")
+texture = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=294103918]
 shape = SubResource("RectangleShape2D_5ok4w")
